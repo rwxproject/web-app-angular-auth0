@@ -4,7 +4,7 @@ var cors = require("cors");
 var serveStatic = require("serve-static");
 
 let config = {
-  origin: true,
+  origin: ["https://rwx.auth0.com"],
   methods: "GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS",
   allowedHeaders: "Content-Type,Authorization,x-user",
   exposedHeaders: "Content-Range,X-Content-Range,x-user",
