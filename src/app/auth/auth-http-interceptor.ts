@@ -19,10 +19,11 @@ export class AuthHttpInterceptor implements HttpInterceptor {
     next: HttpHandler
   ): Observable<HttpEvent<any>> {
     const headers = new HttpHeaders()
-      .set('x-user-id', 'user1')
+      // .set('x-user-id', 'user1')
       .set('Authorization', 'Bearer ' + this.token);
     const request = req.clone({
-      withCredentials: true,
+      // withCredentials: true,
+      headers: headers,
     });
     return next.handle(request);
   }

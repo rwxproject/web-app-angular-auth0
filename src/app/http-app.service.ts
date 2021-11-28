@@ -15,13 +15,13 @@ export class HttpAppService {
 
   getHttpApp() {
     return this.http.get<HttpAppResponse>(
-      'http://system1.app.rwx.systems/user/api'
+      'https://system1.app.rwx.systems/user/api'
     );
   }
 
   getHttpCommon() {
     return this.http.get<HttpAppResponse>(
-      'http://system1.app.rwx.systems/common/api'
+      'https://system1.app.rwx.systems/common/api'
     );
   }
 }
